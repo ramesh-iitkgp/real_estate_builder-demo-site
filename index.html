@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Builder</title>
+    <script>
+      (function(){
+        function getParams(){
+          let params = {};
+          for(let [key, value] of new URL(window.location.href).searchParams.entries()){
+            params[key] = value;
+          }
+          return params;
+        }
+        function titleCase(str){
+          let s = str || '';
+          return s.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase());
+        }
+        function capitalize(str){
+          let s = str || '';
+          return s.charAt(0).toUpperCase() + s.slice(1);
+        }
+        const p = getParams();
+        window.__dynamicParams = {
+          businessName: titleCase(p.name),
+          cityLocation: capitalize(p.location),
+          phone: p.phone || ''
+        };
+      })();
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background: linear-gradient(135deg, #8B4513 0%, #654321 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        main {
+            padding: 60px 20px;
+        }
+        .info-section {
+            background: white;
+            padding: 40px;
+            margin: 40px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .info-section h2 {
+            color: #8B4513;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .info-item {
+            margin: 15px 0;
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+        .label {
+            font-weight: bold;
+            color: #8B4513;
+            display: inline-block;
+            min-width: 120px;
+        }
+        .value {
+            color: #555;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+        .params-display {
+            background: #f0f0f0;
+            padding: 20px;
+            border-left: 4px solid #8B4513;
+            margin-top: 20px;
+            font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 id="builderName">Real Estate Builder</h1>
+            <div class="subtitle" id="builderLocation">Welcome to our service</div>
+        </div>
+    </header>
+    
+    <main>
+        <div class="container">
+            <div class="info-section">
+                <h2>Business Information</h2>
+                <div class="info-item">
+                    <span class="label">Name:</span>
+                    <span class="value" id="displayName">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Location:</span>
+                    <span class="value" id="displayLocation">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Phone:</span>
+                    <span class="value" id="displayPhone">-</span>
+                </div>
+                
+                <div class="params-display">
+                    <strong>Injected Parameters:</strong><br>
+                    Name: <span id="paramName">Not set</span><br>
+                    Location: <span id="paramLocation">Not set</span><br>
+                    Phone: <span id="paramPhone">Not set</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024. All rights reserved.</p>
+    </footer>
+    
+    <script>
+        function updatePageWithParams(){
+            const params = window.__dynamicParams || {};
+            const businessName = params.businessName || 'Real Estate Builder';
+            document.getElementById('builderName').textContent = businessName;
+            document.getElementById('builderLocation').textContent = `Welcome to ${businessName}`;
+            const location = params.cityLocation || 'Your Location';
+            const phone = params.phone || 'Contact us for more info';
+            document.getElementById('displayName').textContent = businessName;
+            document.getElementById('displayLocation').textContent = location;
+            document.getElementById('displayPhone').textContent = phone;
+            document.getElementById('paramName').textContent = businessName;
+            document.getElementById('paramLocation').textContent = location;
+            document.getElementById('paramPhone').textContent = phone;
+        }
+        updatePageWithParams();
+        setTimeout(updatePageWithParams, 100);
+    </script>
+</body>
+</html>
