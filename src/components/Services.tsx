@@ -1,4 +1,4 @@
-import { motion } from 'motion/react';
+import { motion } from 'framer-motion';
 import { Building2, Home, Wrench, PenTool } from 'lucide-react';
 
 const services = [
