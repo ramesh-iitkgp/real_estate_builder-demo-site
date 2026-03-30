@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Real Estate Builder</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
       (function(){
         function getParams(){
@@ -29,6 +30,204 @@
         };
       })();
     </script>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="flex items-center gap-2 text-2xl font-bold text-amber-900">
+          <span>🏗️</span>
+          <span id="businessName">Real Estate Builder</span>
+        </div>
+        <div class="hidden md:flex gap-8 text-sm text-gray-700">
+          <div class="flex items-center gap-1">📞 (555) 987-6543</div>
+          <div class="flex items-center gap-1">📍 456 Building Ave, LA</div>
+          <div class="flex items-center gap-1">🕐 Mon-Fri: 8AM-7PM</div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-amber-800 to-amber-900 text-white py-24">
+      <div class="max-w-6xl mx-auto px-4">
+        <h1 class="text-5xl font-bold mb-4">Build Your Dream Property</h1>
+        <p class="text-xl mb-8 opacity-90">Expert real estate development and construction solutions</p>
+        <div class="flex gap-4 mb-12">
+          <button class="bg-white text-amber-800 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">
+            🏠 View Projects
+          </button>
+          <button class="border-2 border-white px-8 py-3 rounded-lg font-bold hover:bg-amber-800 transition">
+            Get Consultation
+          </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-amber-700 bg-opacity-50 p-6 rounded-lg">
+            <span class="text-4xl block mb-2">🏢</span>
+            <h3 class="font-bold mb-2">Commercial Projects</h3>
+            <p class="text-sm opacity-90">Corporate buildings & shopping centers</p>
+          </div>
+          <div class="bg-amber-700 bg-opacity-50 p-6 rounded-lg">
+            <span class="text-4xl block mb-2">🏡</span>
+            <h3 class="font-bold mb-2">Residential Homes</h3>
+            <p class="text-sm opacity-90">Modern residential communities</p>
+          </div>
+          <div class="bg-amber-700 bg-opacity-50 p-6 rounded-lg">
+            <span class="text-4xl block mb-2">🎯</span>
+            <h3 class="font-bold mb-2">Customization</h3>
+            <p class="text-sm opacity-90">Tailored solutions for your needs</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-gray-50 p-8 rounded-lg shadow hover:shadow-lg transition">
+            <span class="text-3xl mb-4 block">🏢</span>
+            <h3 class="text-xl font-bold mb-3">Downtown Tower</h3>
+            <p class="text-gray-600">50-story commercial complex completed 2023</p>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg shadow hover:shadow-lg transition">
+            <span class="text-3xl mb-4 block">🏘️</span>
+            <h3 class="text-xl font-bold mb-3">Sunset Homes</h3>
+            <p class="text-gray-600">200-unit residential community in development</p>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg shadow hover:shadow-lg transition">
+            <span class="text-3xl mb-4 block">🛒</span>
+            <h3 class="text-xl font-bold mb-3">Plaza Market</h3>
+            <p class="text-gray-600">Modern shopping mall with 100+ stores</p>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg shadow hover:shadow-lg transition">
+            <span class="text-3xl mb-4 block">🏢</span>
+            <h3 class="text-xl font-bold mb-3">Tech Hub</h3>
+            <p class="text-gray-600">Innovation center for startups and tech companies</p>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg shadow hover:shadow-lg transition">
+            <span class="text-3xl mb-4 block">🏨</span>
+            <h3 class="text-xl font-bold mb-3">Luxury Resort</h3>
+            <p class="text-gray-600">5-star resort with 500 rooms and amenities</p>
+          </div>
+          <div class="bg-gray-50 p-8 rounded-lg shadow hover:shadow-lg transition">
+            <span class="text-3xl mb-4 block">🏗️</span>
+            <h3 class="text-xl font-bold mb-3">Mixed Use Complex</h3>
+            <p class="text-gray-600">Combined residential, retail, and office space</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-amber-50">
+      <div class="max-w-6xl mx-auto px-4">
+        <h2 class="text-4xl font-bold text-center mb-12">Our Services</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-4">
+            <div class="flex gap-3">
+              <span class="text-2xl">✓</span>
+              <div>
+                <h3 class="font-bold text-lg">Project Planning</h3>
+                <p class="text-gray-600">Comprehensive feasibility studies and master plans</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-2xl">✓</span>
+              <div>
+                <h3 class="font-bold text-lg">Construction Management</h3>
+                <p class="text-gray-600">Experienced oversight from start to completion</p>
+              </div>
+            </div>
+            <div class="flex gap-3">
+              <span class="text-2xl">✓</span>
+              <div>
+                <h3 class="font-bold text-lg">Architectural Design</h3>
+                <p class="text-gray-600">Award-winning design teams and innovation</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-white p-8 rounded-lg shadow">
+            <div class="space-y-4">
+              <div class="border-b pb-3">
+                <p class="font-bold">📍 Location</p>
+                <p id="location" class="text-gray-600">456 Building Ave, LA</p>
+              </div>
+              <div class="border-b pb-3">
+                <p class="font-bold">📞 Contact</p>
+                <p id="phone" class="text-gray-600">(555) 987-6543</p>
+              </div>
+              <div>
+                <p class="font-bold">🕐 Hours</p>
+                <p class="text-gray-600">Mon-Fri: 8AM-7PM<br>Sat: 9AM-5PM<br>Sun: By Appointment</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+      <div class="max-w-6xl mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <h3 class="font-bold mb-4">Services</h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>✓ Planning</li>
+              <li>✓ Design</li>
+              <li>✓ Construction</li>
+              <li>✓ Management</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Company</h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>About Us</li>
+              <li>Our Team</li>
+              <li>Portfolio</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Connect</h3>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>👍 Facebook</li>
+              <li>🐦 Twitter</li>
+              <li>📷 Instagram</li>
+              <li>💼 LinkedIn</li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-bold mb-4">Contact Info</h3>
+            <p class="text-sm text-gray-400">📍 456 Building Ave, LA</p>
+            <p class="text-sm text-gray-400">📞 (555) 987-6543</p>
+            <p class="text-sm text-gray-400">✉️ info@realestatebuilder.com</p>
+          </div>
+        </div>
+        <div class="border-t border-gray-800 pt-8">
+          <p class="text-center text-gray-400 text-sm">© 2024 Real Estate Builder. All rights reserved. | Privacy Policy | Terms of Service</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Update page with injected parameters
+      document.addEventListener('DOMContentLoaded', function() {
+        const params = window.__dynamicParams || {};
+        if (params.businessName) {
+          document.getElementById('businessName').textContent = params.businessName;
+        }
+        if (params.cityLocation) {
+          document.getElementById('location').textContent = params.cityLocation;
+        }
+        if (params.phone) {
+          document.getElementById('phone').textContent = params.phone;
+        }
+      });
+    </script>
+</body>
+</html>
     <style>
         * {
             margin: 0;
